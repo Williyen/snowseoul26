@@ -1,1 +1,246 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>活字紀行｜清州・首爾 12.03–12.06</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f3ede1;
+  --paper-2:#ebe3d3;
+  --ink:#1c1a16;
+  --ink-soft:#5a5348;
+  --rule:#cbbfa8;
+  --seal:#a8281f;
+  --seal-soft:#f1d9d4;
+  --brass:#8a6a2e;
+  --ok:#2f6b3f;
+  --card:#faf6ee;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#16140f;
+    --paper-2:#1e1b15;
+    --ink:#ece5d6;
+    --ink-soft:#a99f8c;
+    --rule:#3a342a;
+    --seal:#e0574b;
+    --seal-soft:#3a1f1b;
+    --brass:#c9a45c;
+    --ok:#7fc191;
+    --card:#1d1a14;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Noto Sans TC",system-ui,sans-serif;
+  font-size:15px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:720px;margin:0 auto;padding:28px 16px 64px}
+
+/* ---------- masthead ---------- */
+.mast{border-top:6px double var(--ink);border-bottom:1px solid var(--ink);padding:18px 0 14px;margin-bottom:22px;position:relative}
+.mast-meta{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.12em;color:var(--ink-soft);text-transform:uppercase}
+.mast h1{
+  font-family:"Noto Serif TC",serif;font-weight:900;
+  font-size:clamp(40px,11vw,68px);line-height:1.05;letter-spacing:.06em;margin:10px 0 6px;
+}
+.mast .sub{font-family:"Noto Serif TC",serif;font-size:17px;color:var(--ink-soft);letter-spacing:.08em}
+.seal{
+  position:absolute;right:0;top:46px;
+  width:62px;height:62px;border:2.5px solid var(--seal);color:var(--seal);
+  display:grid;place-items:center;transform:rotate(-8deg);
+  font-family:"Noto Serif TC",serif;font-weight:900;font-size:15px;line-height:1.1;text-align:center;letter-spacing:.05em;
+  border-radius:4px;opacity:.9
+}
+.lede{font-family:"Noto Serif TC",serif;font-size:15px;color:var(--ink-soft);border-left:3px solid var(--seal);padding:2px 0 2px 12px;margin-bottom:26px}
+
+/* ---------- overview ---------- */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:30px}
+.box{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:12px 14px}
+.box .k{font-size:11px;letter-spacing:.14em;color:var(--brass);font-weight:700}
+.box .v{font-family:"Noto Serif TC",serif;font-weight:600;font-size:17px;margin:2px 0}
+.box .d{font-size:13px;color:var(--ink-soft);line-height:1.55}
+.box.wide{grid-column:1/-1}
+@media (max-width:480px){.grid{grid-template-columns:1fr}}
+
+/* ---------- day ---------- */
+.day{margin-bottom:34px}
+.day-head{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:6px;margin-bottom:4px}
+.day-no{font-family:"Noto Serif TC",serif;font-weight:900;font-size:30px;line-height:1}
+.day-dow{font-size:13px;color:var(--ink-soft);letter-spacing:.1em}
+.day-title{font-family:"Noto Serif TC",serif;font-weight:600;font-size:18px;margin-left:auto;text-align:right}
+.day-note{font-size:13px;color:var(--ink-soft);margin:8px 0 6px}
+
+.tl{list-style:none}
+.tl li{display:grid;grid-template-columns:78px 1fr;gap:12px;padding:11px 0;border-bottom:1px dashed var(--rule)}
+.tl li:last-child{border-bottom:none}
+.t{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--ink)}
+.t.dim{color:var(--ink-soft);font-weight:500}
+.name{font-family:"Noto Serif TC",serif;font-weight:600;font-size:16px;line-height:1.45}
+.kr{font-size:12px;color:var(--ink-soft);margin-top:1px}
+.desc{font-size:13.5px;color:var(--ink-soft);margin-top:4px}
+.desc b{color:var(--ink);font-weight:600}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;padding:1px 7px;border-radius:3px;margin-left:6px;vertical-align:2px}
+.tag.ok{background:transparent;border:1px solid var(--ok);color:var(--ok)}
+.tag.seal{background:var(--seal-soft);color:var(--seal)}
+.tag.opt{border:1px dashed var(--ink-soft);color:var(--ink-soft)}
+.move .name{font-family:"Noto Sans TC",sans-serif;font-weight:500;font-size:14px;color:var(--ink-soft)}
+.move .t{color:var(--ink-soft);font-weight:500}
+
+/* ---------- notes ---------- */
+.sect{font-family:"Noto Serif TC",serif;font-weight:900;font-size:20px;letter-spacing:.08em;border-bottom:2px solid var(--ink);padding-bottom:4px;margin:38px 0 12px}
+.notes{display:grid;gap:10px}
+.note{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--brass);border-radius:4px;padding:11px 14px;font-size:13.5px}
+.note.warn{border-left-color:var(--seal)}
+.note h3{font-family:"Noto Serif TC",serif;font-size:15px;margin-bottom:3px}
+.note ul{padding-left:18px;color:var(--ink-soft)}
+
+.todo{list-style:none;display:grid;gap:6px}
+.todo li{display:flex;gap:10px;align-items:flex-start;font-size:14px}
+.todo .bx{flex:0 0 16px;height:16px;border:1.5px solid var(--ink);border-radius:2px;margin-top:4px}
+
+footer{margin-top:44px;padding-top:10px;border-top:6px double var(--ink);font-size:11px;letter-spacing:.12em;color:var(--ink-soft);display:flex;justify-content:space-between}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="mast">
+    <div class="mast-meta"><span>2026 冬・號外</span><span>TPE ⇄ CJJ</span></div>
+    <h1>活字紀行</h1>
+    <div class="sub">清州・首爾　12.03 – 12.06</div>
+  </header>
+
+  <p class="lede">從世界最早的金屬活字本《直指》誕生地出發，北上首爾讀一座報紙博物館。印刷與新聞，同一條線的兩端。</p>
+
+  <section class="grid">
+    <div class="box wide">
+      <div class="k">去程</div>
+      <div class="v">ZE782 易斯達</div>
+      <div class="d">12/4（五）02:35 桃園 T1 → 06:05 清州</div>
+    </div>
+    <div class="box wide">
+      <div class="k">住宿</div>
+      <div class="v">Monrêve Cabins Seoul Gangnam</div>
+      <div class="d">首爾瑞草區・12/4–12/6 兩晚・含早餐・入住 15:00 起，櫃台服務至午夜・不可退改</div>
+    </div>
+    <div class="box wide">
+      <div class="k">回程</div>
+      <div class="v">RF513 可依航空</div>
+      <div class="d">12/6（日）16:35 清州 → 18:10 桃園</div>
+    </div>
+  </section>
+
+  <!-- ===== 12/3 ===== -->
+  <section class="day">
+    <div class="day-head">
+      <span class="day-no">12.03</span><span class="day-dow">THU</span>
+      <span class="day-title">出發夜</span>
+    </div>
+    <ul class="tl">
+      <li><span class="t dim">白天</span><div><div class="name">台中</div><div class="desc">車停高鐵台中站</div></div></li>
+      <li><span class="t">22:40</span><div><div class="name">高鐵 台中 → 桃園<span class="tag ok">已訂</span></div><div class="desc">23:23 抵達高鐵桃園站</div></div></li>
+      <li><span class="t">23:34</span><div><div class="name">機場捷運 A18 → A12</div><div class="desc">23:53 抵達第一航廈<br>備案：23:49 發車，00:08 抵達</div></div></li>
+      <li><span class="t">00:00</span><div><div class="name">桃園機場第一航廈</div><div class="desc">易斯達報到櫃台</div></div></li>
+    </ul>
+  </section>
+
+  <!-- ===== 12/4 ===== -->
+  <section class="day">
+    <div class="day-head">
+      <span class="day-no">12.04</span><span class="day-dow">FRI</span>
+      <span class="day-title">清州・活字之城</span>
+    </div>
+    <p class="day-note">請假日。前一晚沒睡，清晨落地是全程最冷的時刻。</p>
+    <ul class="tl">
+      <li><span class="t">06:05</span><div><div class="name">抵達清州國際機場</div></div></li>
+      <li><span class="t">07:00</span><div><div class="name">出關・機場早餐・整裝</div><div class="desc">衣服穿到位，便利商店買暖暖包（핫팩）。在室內用 KakaoMap 查 747 往<b>오송역（五松站）</b>方向的下一班。</div></div></li>
+      <li class="move"><span class="t">約 08:00</span><div><div class="name">747 急行公車 → 市區（清州大橋一帶）</div></div></li>
+      <li><span class="t">09:00</span><div><div class="name">清州古印刷博物館＋興德寺址</div><div class="kr">청주고인쇄박물관・흥덕사지</div><div class="desc">《直指》的印刷地，原本今藏於法國國家圖書館。先走遺址、再看展品。免費，週一休館。</div></div></li>
+      <li class="move"><span class="t">10:30</span><div><div class="name">市區公車 → 市中心</div></div></li>
+      <li><span class="t">10:45</span><div><div class="name">市中心步行</div><div class="kr">용두사지 철당간 → 성안길 → 육거리시장</div><div class="desc">龍頭寺址鐵幢竿 → 成安街 → 六거리市場午餐</div></div></li>
+      <li><span class="t">13:00</span><div><div class="name">國立現代美術館 清州館</div><div class="kr">국립현대미술관 청주</div><div class="desc">韓國第一座開放式典藏庫，由舊菸草工廠改建。<b>週五 13:00–15:00 開放保存科學實驗室。</b></div></div></li>
+      <li class="move"><span class="t">15:00</span><div><div class="name">公車 → 清州市外巴士客運站</div><div class="desc">청주시외버스터미널・가경동 1449（隔壁高速巴士臨時站是另一棟，別走錯）</div></div></li>
+      <li><span class="t">16:30</span><div><div class="name">巴士 → 首爾南部客運站<span class="tag ok">已訂</span></div><div class="desc">18:00 抵達・座位 01・Hanpass 電子票</div></div></li>
+      <li><span class="t">18:30</span><div><div class="name">入住 Monrêve Cabins</div><div class="desc">早點休息</div></div></li>
+    </ul>
+  </section>
+
+  <!-- ===== 12/5 ===== -->
+  <section class="day">
+    <div class="day-head">
+      <span class="day-no">12.05</span><span class="day-dow">SAT</span>
+      <span class="day-title">首爾・紙面與燈火</span>
+    </div>
+    <ul class="tl">
+      <li><span class="t dim">早上</span><div><div class="name">飯店早餐</div></div></li>
+      <li class="move"><span class="t dim">—</span><div><div class="name">地鐵 → 光化門，約 40 分鐘</div></div></li>
+      <li><span class="t">10:00</span><div><div class="name">新聞博物館 PRESSEUM</div><div class="kr">신문박물관・세종대로 152 일민미술관 5–6층</div><div class="desc">九月因中秋休館錯過，這次補回。成人 3,000 韓元。</div></div></li>
+      <li class="move"><span class="t dim">—</span><div><div class="name">步行，同一條世宗大路</div></div></li>
+      <li><span class="t">11:30</span><div><div class="name">大韓民國歷史博物館</div><div class="kr">대한민국역사박물관・세종대로 198</div><div class="desc">免費。韓文日制定 100 週年相關展覽（3 樓主題館、1 樓）。</div></div></li>
+      <li class="move"><span class="t">12:45</span><div><div class="name">地鐵 → 蠶室，約 40–50 分鐘</div></div></li>
+      <li><span class="t">13:45</span><div><div class="name">樂天世界購物中心</div><div class="kr">롯데월드몰</div><div class="desc">午餐、逛街、購物，傍晚吃完晚餐再走。<b>留意回程手提行李重量與液體容量。</b></div></div></li>
+      <li class="move"><span class="t">17:30</span><div><div class="name">地鐵 → 飯店（瑞草區）</div></div></li>
+      <li><span class="t">18:15</span><div><div class="name">回飯店休息</div><div class="desc">放下戰利品，休息到出發</div></div></li>
+      <li class="move"><span class="t">20:00</span><div><div class="name">飯店 → COEX</div></div></li>
+      <li><span class="t">20:30</span><div><div class="name">七樂娛樂場 COEX 店</div><div class="kr">세븐럭카지노 강남코엑스점</div><div class="desc"><b>20:30–22:30</b>・外國人專用・滿 19 歲・勿穿短褲背心涼鞋<br>百家樂押莊，停利停損線先寫好，贏了就走。</div></div></li>
+      <li class="move"><span class="t">22:30</span><div><div class="name">COEX → 返回飯店</div><div class="desc">地鐵或公車皆可；若地鐵罷工、班次少或已收班，改搭計程車</div></div></li>
+    </ul>
+  </section>
+
+  <!-- ===== 12/6 ===== -->
+  <section class="day">
+    <div class="day-head">
+      <span class="day-no">12.06</span><span class="day-dow">SUN</span>
+      <span class="day-title">回程</span>
+    </div>
+    <ul class="tl">
+      <li><span class="t dim">早上</span><div><div class="name">飯店早餐</div></div></li>
+      <li><span class="t">11:00</span><div><div class="name">退房</div><div class="desc">前往首爾南部客運站，附近吃午餐</div></div></li>
+      <li><span class="t">12:40</span><div><div class="name">巴士 → 清州機場<span class="tag ok">已訂</span></div><div class="desc">14:20 抵達・Hanpass 電子票</div></div></li>
+      <li><span class="t">16:35</span><div><div class="name">RF513 起飛</div></div></li>
+      <li><span class="t">18:10</span><div><div class="name">抵達桃園</div><div class="desc">機場捷運 A12 → A18</div></div></li>
+      <li><span class="t dim">之後</span><div><div class="name">高鐵 桃園 → 台中<span class="tag ok">已訂</span></div><div class="desc">回台中站取車</div></div></li>
+    </ul>
+  </section>
+
+  <!-- ===== notes ===== -->
+  <h2 class="sect">出發前須知</h2>
+  <div class="notes">
+    <div class="note warn">
+      <h3>天氣</h3>
+      <ul>
+        <li>首爾、清州十二月平均高溫約 4°C，低溫約 -3 至 -4°C</li>
+        <li>12/4 清晨可能在零度以下，下飛機前就穿好外套</li>
+        <li>日落約 17:15</li>
+      </ul>
+    </div>
+    <div class="note warn">
+      <h3>地鐵罷工</h3>
+      <ul>
+        <li>首爾地鐵可能罷工，12/5 出門前留意新聞，班次可能減少</li>
+      </ul>
+    </div>
+    <div class="note">
+      <h3>交通工具</h3>
+      <ul>
+        <li>地圖用 KakaoMap 或 Naver Map，公車即時到站較準</li>
+        <li>T-money 卡可搭清州市區公車與首爾地鐵</li>
+        <li>Hanpass 車票 QR 碼先截圖；訂單電話為佔位號碼，出發前自行進 App 確認狀態</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer><span>活字紀行</span><span>CHEONGJU・SEOUL 2026</span></footer>
+</div>
+</body>
+</html>
 
